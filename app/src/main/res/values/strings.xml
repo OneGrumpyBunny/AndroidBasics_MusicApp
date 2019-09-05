@@ -1,0 +1,91 @@
+<resources>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">Sound\nHound</string>
+    <string name="songtitle">Song Title</string>
+    <string name="albumtitle">Album Title</string>
+    <string name="artistname">Artist Name</string>
+    <string name="songlength">04:10</string>
+    <string name="songstart">00:00</string>
+    <string name="artistsmenu">Artists</string>
+    <string name="songsmenu">Songs</string>
+    <string name="albumsmenu">Albums</string>
+    <string name="songDetail">Song Detail</string>
+
+    <array name="songsCoverArt">
+        <item>@drawable/coverart_indigo_big</item>
+        <item>@drawable/coverart_indigo_big</item>
+        <item>@drawable/coverart_kissme_big</item>
+        <item>@drawable/coverart_halfs_big</item>
+        <item>@drawable/coverart_create_big</item>
+        <item>@drawable/coverart_bigger_big</item>
+        <item>@drawable/coverart_raveon_big</item>
+        <item>@drawable/coverart_yank_big</item>
+        <item>@drawable/coverart_lineup_big</item>
+        <item>@drawable/coverart_hurry_big</item>
+        <item>@drawable/coverart_hurry_big</item>
+        <item>@drawable/coverart_proud_big</item>
+    </array>
+
+    <string-array name="songsTitles">
+        <item>Be There</item>
+        <item>Indigo</item>
+        <item>Kiss Me</item>
+        <item>Halfs</item>
+        <item>Create</item>
+        <item>Bigger</item>
+        <item>Rave On</item>
+        <item>Yank</item>
+        <item>Line Up</item>
+        <item>Please</item>
+        <item>Hurry</item>
+        <item>Proud</item>
+    </string-array>
+
+    <string-array name="songsLength">
+        <item>3.4</item>
+        <item>4.40</item>
+        <item>4.10</item>
+        <item>4.10</item>
+        <item>3.90</item>
+        <item>4.12</item>
+        <item>3.85</item>
+        <item>3.90</item>
+        <item>3.95</item>
+        <item>4.05</item>
+        <item>4.20</item>
+        <item>4.25</item>
+    </string-array>
+
+
+    <string-array name="albumTitle">
+        <item>Jumper</item>
+        <item>Jumper</item>
+        <item>The Course</item>
+        <item>Operatic</item>
+        <item>Poisonous</item>
+        <item>Proper Attire</item>
+        <item>Harlem</item>
+        <item>Harley</item>
+        <item>Harlem</item>
+        <item>Cracked</item>
+        <item>Cracked</item>
+        <item>Farsity</item>
+    </string-array>
+
+
+    <string-array name="artistName">
+        <item>Halton</item>
+        <item>Halton</item>
+        <item>Radson</item>
+        <item>Jonesie</item>
+        <item>Two People</item>
+        <item>Rotten</item>
+        <item>Trapper</item>
+        <item>Korix</item>
+        <item>Pepper Sky</item>
+        <item>Yellow</item>
+        <item>Yellow</item>
+        <item>Cannon</item>
+    </string-array>
+
+</resources>

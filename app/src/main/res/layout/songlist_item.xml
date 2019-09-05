@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        card_view:cardCornerRadius="4dp">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/coverArt"-->
+<!--        android:layout_width="55dp"-->
+<!--        android:layout_height="55dp"-->
+<!--        android:layout_marginLeft="@dimen/padding5"-->
+<!--        android:layout_marginTop="@dimen/padding10"-->
+<!--        android:layout_marginRight="25dp"-->
+<!--        android:layout_marginBottom="@dimen/padding10"-->
+<!--        android:src="@drawable/coverart_bethere"-->
+<!--        android:contentDescription="TODO"-->
+<!--        android:layout_marginStart="@dimen/padding5"-->
+<!--        android:layout_marginEnd="25dp" />-->
+
+        <LinearLayout
+            android:id="@+id/playSong"
+            style="@style/defaultLayout"
+            android:layout_width="297dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding25"
+                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/padding25">
+
+                <TextView
+                    android:id="@+id/songTitle"
+                    style="@style/defaultLayout"
+                    android:paddingTop="@dimen/padding5"
+                    android:text="@string/songtitle"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/text22" />
+
+                <TextView
+                    android:id="@+id/songLength"
+                    style="@style/defaultLayout"
+                    android:layout_marginStart="@dimen/padding10"
+                    android:layout_marginLeft="@dimen/padding10"
+                    android:text="@string/songlength"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding25"
+                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/padding25">
+
+                <TextView
+                    android:id="@+id/artistName"
+                    style="@style/defaultLayout"
+                    android:paddingTop="@dimen/padding5"
+                    android:text="@string/artistname"
+                    android:textColor="@color/colorPrimaryLight" />
+
+                <TextView
+                    style="@style/defaultLayout"
+                    android:layout_marginLeft="@dimen/padding10"
+                    android:paddingTop="@dimen/padding5"
+                    android:text=" - "
+                    android:textColor="@color/colorPrimaryLight" />
+
+                <TextView
+                    android:id="@+id/albumTitle"
+                    style="@style/defaultLayout"
+                    android:layout_marginLeft="@dimen/padding10"
+                    android:paddingTop="@dimen/padding5"
+                    android:text="@string/albumtitle"
+                    android:textColor="@color/colorPrimaryLight" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
