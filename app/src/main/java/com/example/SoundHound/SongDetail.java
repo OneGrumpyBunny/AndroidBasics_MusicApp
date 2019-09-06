@@ -38,7 +38,7 @@ public class SongDetail extends AppCompatActivity {
         String songLength = intent.getStringExtra("songLength");
         String albumTitle = intent.getStringExtra("albumTitle");
         String artistName = intent.getStringExtra("artistName");
-        Integer BigCoverArt = intent.getExtras().getInt("BigCoverArt");
+        int BigCoverArt = intent.getIntExtra("coverArt", 0);
 
 //        Toolbar toolbar = findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);

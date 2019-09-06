@@ -1,6 +1,7 @@
 package com.example.SoundHound;
 
 import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -55,15 +56,21 @@ public class MainActivity extends AppCompatActivity {
             String[] albumTitle = getResources().getStringArray(R.array.albumTitle);
             String[] songLength = getResources().getStringArray(R.array.songsLength);
             String[] artistName = getResources().getStringArray(R.array.artistName);
-            int[] songCoverArt = getResources().getIntArray(R.array.songsCoverArt);
+
+            TypedArray typedArray = getResources().obtainTypedArray(R.array.songsCoverArt);
 
             for (int i = 0; i < songTitle.length; i++) {
 
-                Log.d(TAG, "Adding = " + songTitle[i] + " " + albumTitle[i] + " " + songLength[i] + " " + artistName[i] + " " + songCoverArt[i]);
+                int coverArtResourceId = typedArray.getResourceId(i, 0);
 
-                songs.add(new Song(songTitle[i], albumTitle[i], songLength[i], artistName[i], songCoverArt[i]));
+                Log.d(TAG, "Adding = " + songTitle[i] + " " + albumTitle[i] + " " + songLength[i] + " " + artistName[i] + " " + coverArtResourceId);
+
+                songs.add(new Song(songTitle[i], albumTitle[i], songLength[i], artistName[i], coverArtResourceId));
 
             }
+
+            typedArray.recycle(); // Important
+
             songAdapter.addItems(songs);
             recyclerView.setAdapter(songAdapter);
 
