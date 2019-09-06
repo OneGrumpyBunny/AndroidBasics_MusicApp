@@ -13,7 +13,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder>  {
+public class SongAdapter extends RecyclerView.Adapter<BaseViewHolder>  {
 
 
 
@@ -25,13 +25,12 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder>  {
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        Song song = SongList.get(position);
-        holder.onBind(song);
+    public void onBindViewHolder(BaseViewHolder holder, int position) {
+        holder.onBind(position);
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.songlist_item, parent, false));
     }
@@ -46,7 +45,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder>  {
         notifyDataSetChanged();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends BaseViewHolder {
 
         @BindView(R.id.songTitle) TextView songTitle;
         @BindView(R.id.songLength) TextView songLength;
@@ -59,7 +58,18 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder>  {
             ButterKnife.bind(this, itemView);
         }
 
-        public void onBind(Song song) {
+        protected void clear() {
+            songTitle.setText("");
+            albumTitle.setText("");
+            songLength.setText("");
+            artistName.setText("");
+            coverArt.setImageDrawable(null);
+        }
+
+        public void onBind(int position) {
+            super.onBind(position);
+
+            final Song song = SongList.get(position);
 
             if (song.getSongTitle() != null) {
                 songTitle.setText(song.getSongTitle());
