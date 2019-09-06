@@ -11,7 +11,7 @@
     <string name="albumsmenu">Albums</string>
     <string name="songDetail">Song Detail</string>
 
-    <array name="songsCoverArt">
+    <integer-array name="songsCoverArt">
         <item>@drawable/coverart_indigo_big</item>
         <item>@drawable/coverart_indigo_big</item>
         <item>@drawable/coverart_kissme_big</item>
@@ -24,7 +24,7 @@
         <item>@drawable/coverart_hurry_big</item>
         <item>@drawable/coverart_hurry_big</item>
         <item>@drawable/coverart_proud_big</item>
-    </array>
+    </integer-array>
 
     <string-array name="songsTitles">
         <item>Be There</item>
