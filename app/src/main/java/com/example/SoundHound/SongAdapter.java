@@ -51,7 +51,7 @@ public class SongAdapter extends RecyclerView.Adapter<BaseViewHolder>  {
         @BindView(R.id.songLength) TextView songLength;
         @BindView(R.id.artistName) TextView artistName;
         @BindView(R.id.albumTitle) TextView albumTitle;
-//        @BindView(R.id.coverArt) ImageView coverArt;
+        @BindView(R.id.coverArt) ImageView coverArt;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -63,7 +63,7 @@ public class SongAdapter extends RecyclerView.Adapter<BaseViewHolder>  {
             albumTitle.setText("");
             songLength.setText("");
             artistName.setText("");
-//            coverArt.setImageDrawable(null);
+            coverArt.setImageDrawable(null);
         }
 
         public void onBind(int position) {
@@ -86,11 +86,9 @@ public class SongAdapter extends RecyclerView.Adapter<BaseViewHolder>  {
                 artistName.setText(song.getArtistName());
             }
 
-
-//            if (song.getCoverArt() != 0) {
-//                coverArt.setImageResource(song.getCoverArt());
-//            }
-
+            if (song.getCoverArt() != 0) {
+                coverArt.setImageResource(song.getCoverArt());
+            }
 
             itemView.setOnClickListener(v -> {
                 Intent intent = new Intent(v.getContext(), SongDetail.class);
