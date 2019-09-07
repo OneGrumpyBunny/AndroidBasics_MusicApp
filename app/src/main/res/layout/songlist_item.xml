@@ -22,7 +22,7 @@
         android:layout_marginTop="@dimen/padding10"
         android:layout_marginRight="25dp"
         android:layout_marginBottom="@dimen/padding10"
-        android:src="@drawable/coverart_bethere"
+        android:src="@drawable/coverart_bethere_big"
         android:contentDescription="TODO"
         android:layout_marginStart="@dimen/padding5"
         android:layout_marginEnd="25dp" />
