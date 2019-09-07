@@ -8,14 +8,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+
+/**
+ * @link SongAdapter represents a custom ArrayAdapter for the custom class Song
+ */
+
 public class SongAdapter extends RecyclerView.Adapter<BaseViewHolder>  {
-
-
 
     private List<Song> SongList;
 
@@ -24,29 +28,38 @@ public class SongAdapter extends RecyclerView.Adapter<BaseViewHolder>  {
         SongList = songList;
     }
 
+    // define view holder and bind data to it
     @Override
     public void onBindViewHolder(BaseViewHolder holder, int position) {
         holder.onBind(position);
     }
 
+    /**
+     * @param viewType This is the view type resource for the viewHolder
+     */
+
     @Override
     public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
+        // inflate the songlist_item layout
 
         return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.songlist_item, parent, false));
     }
 
+    // get the site of the arraylist
     @Override
     public int getItemCount() {
         return SongList.size();
     }
 
-    public void addItems(List<Song> sportList) {
-        SongList.addAll(sportList);
-        notifyDataSetChanged();
+    // add data to the array
+    public void addItems(ArrayList<Song> songList) {
+        SongList.addAll(songList);
     }
 
     public class ViewHolder extends BaseViewHolder {
 
+        // Bind views within the view holder
         @BindView(R.id.songTitle) TextView songTitle;
         @BindView(R.id.songLength) TextView songLength;
         @BindView(R.id.artistName) TextView artistName;
@@ -66,6 +79,7 @@ public class SongAdapter extends RecyclerView.Adapter<BaseViewHolder>  {
             coverArt.setImageDrawable(null);
         }
 
+        // populate the views using methods in the custom class
         public void onBind(int position) {
             super.onBind(position);
 

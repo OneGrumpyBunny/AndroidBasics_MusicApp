@@ -10,6 +10,7 @@
     <string name="songsmenu">Songs</string>
     <string name="albumsmenu">Albums</string>
     <string name="songDetail">Song Detail</string>
+    <string name="action_albumList">Album List</string>
 
     <integer-array name="songsCoverArt">
         <item>@drawable/coverart_indigo_big</item>

@@ -2,30 +2,19 @@ package com.example.SoundHound;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.RelativeLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
-import butterknife.ButterKnife;
-
 /**
- * @lilnk SongDetail represents a detailed view of a selected song with action buttons
+ * @link SongDetail represents a detailed view of a selected song with action buttons
  */
 
 public class SongDetail extends AppCompatActivity {
-    SongAdapter songAdapter;
-    private static final String TAG = "SongAdapter";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,28 +29,25 @@ public class SongDetail extends AppCompatActivity {
         String artistName = intent.getStringExtra("artistName");
         int BigCoverArt = intent.getIntExtra("coverArt", 0);
 
-//        Toolbar toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-
         // Sets songTitle
-        TextView SongTitleDetail = (TextView) findViewById(R.id.songTitleDetail);
+        TextView SongTitleDetail = (TextView) findViewById(R.id.songTitle);
         SongTitleDetail.setText(songTitle);
 
         // Sets songLength
-        TextView SongLengthDetail = (TextView) findViewById(R.id.songLengthDetail);
+        TextView SongLengthDetail = (TextView) findViewById(R.id.songLength);
         SongLengthDetail.setText(songLength);
 
         // Sets the album title
-        TextView albumTitleDetailBig = (TextView) findViewById(R.id.albumTitleDetail);
+        TextView albumTitleDetailBig = (TextView) findViewById(R.id.albumTitle);
         albumTitleDetailBig.setText(albumTitle); // The Album title shows twice on the detail activity
 
         // Sets artist name
-        TextView artistNameDetail = (TextView) findViewById(R.id.artistNameDetail);
+        TextView artistNameDetail = (TextView) findViewById(R.id.artistName);
         artistNameDetail.setText(artistName);
 
         // Sets cover art image
-        RelativeLayout CoverArtBack = (RelativeLayout) findViewById(R.id.BigCoverArt);
-        CoverArtBack.setBackgroundResource(BigCoverArt);
+        ImageView coverArt = (ImageView) findViewById(R.id.coverArt);
+        coverArt.setImageResource(BigCoverArt);
     }
 
     @Override
